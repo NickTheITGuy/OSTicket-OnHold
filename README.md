@@ -1,6 +1,8 @@
 # OSTicket-OnHold
 Current version of mod: V1.1
 Designed for OSTicket: 1.10
+Mod was created by: NickTheITGuy
+(https://github.com/NickTheITGuy // http://osticket.com/forum/profile/208230/NickTheITguy)
 
 # INSTALLATION
 
