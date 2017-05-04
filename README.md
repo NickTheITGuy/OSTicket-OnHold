@@ -26,4 +26,4 @@ Step 5. Upload the attached files to the below specified locations:
 - Upload "scp.css" in the folder \scp\css\
 - Upload "tickets.inc.php" in the folder \include\staff\
 - Upload "tickets.php" in the folder \scp\
-- Upload "onhold_ticket.gif" in the folder \scp\images\icons\
+- Upload "onhold_ticket.gif" in the folder \scp\images\icons\ 
