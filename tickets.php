@@ -357,6 +357,9 @@ if ($redirect) {
 /*... Quick stats ...*/
 $stats= $thisstaff->getTicketsStats();
 
+// Patch for ON-HOLD mod count issue.
+$customCountOnHold = db_fetch_array(db_query("SELECT COUNT(*) FROM ost_ticket WHERE `ost_ticket`.`status_id` = 6;"));
+
 // Clear advanced search upon request
 if (isset($_GET['clear_filter']))
     unset($_SESSION['advsearch']);
@@ -383,7 +386,7 @@ if($cfg->showAnsweredTickets()) {
                             ((!$_REQUEST['status'] && !isset($_SESSION['advsearch'])) || $_REQUEST['status']=='open'));
     }
 	
-		$nav->addSubMenu(array('desc' => __('Onhold').' ('.number_format($stats['answered']).')',
+		$nav->addSubMenu(array('desc' => __('Onhold').' ('.$customCountOnHold['COUNT(*)'].')',
                        'title'=>__('Onhold Tickets'),
                        'href'=>'tickets.php?status=onhold',
                        'iconclass'=>'onholdTickets'),
