@@ -15,8 +15,12 @@ Open any SQL database program (such as PHPmyadmin) and go to the "OST_ticket_sta
 In this table, copy the ID of the On Hold status.
 
 Step 3. 
-Open the file "tickets.inc.php" (Located in the attachments of this post)
+Open the file "tickets.inc.php"
 and go to line 96, and change the number to the ID you copied.
+
+Step 4. 
+Open the file "tickets.php"
+and go to line 361, and change the number to the ID you copied.
 
 Step 4. Upload the attached files to the below specified locations:
 - Upload "scp.css" in the folder \scp\css\
