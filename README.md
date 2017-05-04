@@ -22,7 +22,7 @@ Step 4.
 Open the file "tickets.php"
 and go to line 361, and change the number to the ID you copied.
 
-Step 4. Upload the attached files to the below specified locations:
+Step 5. Upload the attached files to the below specified locations:
 - Upload "scp.css" in the folder \scp\css\
 - Upload "tickets.inc.php" in the folder \include\staff\
 - Upload "tickets.php" in the folder \scp\
