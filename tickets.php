@@ -254,7 +254,7 @@ if($_POST && !$errors):
                         $ticket->logActivity(__('Ticket Marked Answered'),$msg);
                     } else {
                         $errors['err']=__('Problems marking the the ticket answered. Try again');
-                    }
+                    } 
                     break;
                 case 'unanswered':
                     $dept = $ticket->getDept();
