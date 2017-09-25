@@ -385,12 +385,6 @@ if($cfg->showAnsweredTickets()) {
                                'iconclass'=>'Ticket'),
                             ((!$_REQUEST['status'] && !isset($_SESSION['advsearch'])) || $_REQUEST['status']=='open'));
     }
-	
-		$nav->addSubMenu(array('desc' => __('Onhold').' ('.$customCountOnHold['COUNT(*)'].')',
-                       'title'=>__('Onhold Tickets'),
-                       'href'=>'tickets.php?status=onhold',
-                       'iconclass'=>'onholdTickets'),
-                    ($_REQUEST['status']=='onhold'));
 
     if($stats['answered']) {
         $nav->addSubMenu(array('desc'=>__('Answered').' ('.number_format($stats['answered']).')',
@@ -441,6 +435,12 @@ $nav->addSubMenu(array('desc' => __('Closed'),
                        'href'=>'tickets.php?status=closed',
                        'iconclass'=>'closedTickets'),
                     ($_REQUEST['status']=='closed'));
+		
+$nav->addSubMenu(array('desc' => __('Onhold').' ('.$customCountOnHold['COUNT(*)'].')',
+                       'title'=>__('Onhold Tickets'),
+                       'href'=>'tickets.php?status=onhold',
+                       'iconclass'=>'onholdTickets'),
+                    ($_REQUEST['status']=='onhold'));
 
 if ($thisstaff->hasPerm(TicketModel::PERM_CREATE, false)) {
     $nav->addSubMenu(array('desc'=>__('New Ticket'),
