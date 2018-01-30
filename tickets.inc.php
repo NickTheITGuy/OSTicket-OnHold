@@ -101,7 +101,7 @@ case 'overdue':
     $status='open';
     $results_type=__('Overdue Tickets');
     $tickets->filter(array('isoverdue'=>1));
-	$tickets->filter(array('status_id'=>1));
+    $tickets->exclude(array('status_id'=>6));
     $queue_sort_options = array('priority,due', 'due', 'priority,updated',
         'updated', 'answered', 'priority,created', 'number', 'hot');
     break;
@@ -122,7 +122,7 @@ case 'answered':
     $showanswered=true;
     $results_type=__('Answered Tickets');
     $tickets->filter(array('isanswered'=>1));
-	$tickets->filter(array('status_id'=>1));
+    $tickets->exclude(array('status_id'=>6));
     $queue_sort_options = array('answered', 'priority,updated', 'updated',
         'priority,created', 'priority,due', 'due', 'number', 'hot');
     break;
@@ -203,7 +203,7 @@ case 'open':
     $results_type=__('Open Tickets');
     if (!$cfg->showAnsweredTickets())
         $tickets->filter(array('isanswered'=>0));
-		$tickets->filter(array('status_id'=>1));
+    $tickets->exclude(array('status_id'=>6));
     $queue_sort_options = array('priority,updated', 'updated',
         'priority,due', 'due', 'priority,created', 'answered', 'number',
         'hot');
